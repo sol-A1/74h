@@ -32,10 +32,10 @@ app.post('/', async (req, res) => {
 prompt: `As an expert consultant, please advise me on the best choice between ${skills} and ${balance}. Please provide your response in the following format:
 
 1. Decision: A paragraph detailing the decision.
-2. Explanation: Bullet pointed list of reasons why the decision is the best choice, and why the other option is not. Bullet points only. End.
+2. Explanation: Bullet pointed explanatory list of reasons why the decision is the best choice, and why the other option is not. Bullet points only. //do not add step 3.
 `,
-      temperature: 0,
-      max_tokens: 3500,
+      temperature: 0.4,
+      max_tokens: 3700,
       top_p: 1,
       frequency_penalty: 0,
       presence_penalty: 0,
