@@ -23,7 +23,6 @@ const chatStripe = (isBot, text, id) => {
   `
 }
 
-
 const typeText = (messageDiv, text) => {
   const charsPerInterval = 5;
   const lines = text.split('\n').filter(Boolean); // Split text into individual lines
@@ -38,6 +37,8 @@ const typeText = (messageDiv, text) => {
       } else if (line.trim().startsWith("Decision:")) {
         messageDiv.querySelector('.bot-text').innerHTML += `<br />\n<b>${line}</b><br />\n`; // Add bold tags to Decision
         messageDiv.querySelector('.bot-text').innerHTML += '<br />\n'; // Add line break
+      } else if (line.trim().startsWith("-")) {
+        messageDiv.querySelector('.bot-text').innerHTML += `${line}<br />\n`; // Add bullet point
       } else {
         messageDiv.querySelector('.bot-text').innerHTML += `${line}<br />\n`; // Add line break
       }
@@ -48,6 +49,8 @@ const typeText = (messageDiv, text) => {
     }
   }, 50);
 }
+
+
 
 const loader = (messageDiv) => {
   const loaderDiv = messageDiv.querySelector('.loader')
@@ -92,7 +95,7 @@ const handleSubmit = async (e) => {
   // specific message div 
   const messageDiv = document.getElementById(uniqueId)
 
-  const response = await fetch('https://yfne.onrender.com', {
+  const response = await fetch('http://localhost:5003', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
