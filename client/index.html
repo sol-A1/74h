@@ -12,16 +12,18 @@
       <h1>DecideAI</h1>
 
     </header>
+ <p>Indecisive? Get AI-powered assistance to help make the tough choices for you</p> 
 
-      <p>Indecisive? Get AI-powered assistance to help you make the tough choices</p> 
+    
       <form id="form">
         <div class="question">
-          <label for="option1">Option 1:</label>
-          <input type="text" id="skill" name="skills" />
+          <input type="text" id="skill" name="skills" placeholder="Option 1">
+        </div>
+
+        <div class="or"> <div>Or</div>
         </div>
         <div class="question">
-          <label for="option2">Option 2:</label>
-          <input type="text" id="quote-length" name="balance" />
+          <input type="text" id="quote-length" name="balance" placeholder="Option 2">
         </div>
         <button id="generate-btn">GENERATE</button>
       </form>
@@ -30,6 +32,7 @@
       
       <footer>
         <div class="warning">The AI won't take responsibility for your choices, but it'll make them for you!</div>
+    
       </footer>
       </div></div>
     <script src="script.js" type="module"></script>
