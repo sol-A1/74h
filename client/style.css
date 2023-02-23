@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+.container {
+  background-color: #64b168;
+  border-radius: 
+  5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  margin: 13px auto;
+  max-width: 98%;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #ffffff;
+  font-family: 'Russo One', sans-serif;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+p {
+  color: #ffffff;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.question {
+  margin-bottom: 20px;
+  text-align: left;
+  color: white;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+input[type="text"] {
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(147, 147, 147, 0.1);
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+}
+
+button {
+  background-color: #3b96e1;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  transition: background-color 0.15s ease-in-out;
+}
+
+button:hover {
+  background-color: #7fbae4;
+}
+
+#chat-container {
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  margin: 20px auto;
+  max-width: 100%;
+  padding: 20px;
+  text-align: left;
+  overflow-y: scroll;
+  height: 500px;
+}
+
+#chat-container ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#chat-container li {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+#chat-container .bot {
+  justify-content: flex-start;
+}
+
+#chat-container .user {
+  justify-content: flex-end;
+}
+
+#chat-container .message {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  padding: 10px;
+  max-width: 70%;
+}
+
+#chat-container .bot .message {
+  margin-right: 10px;
+}
+
+#chat-container .user .message {
+  margin-left: 10px;
+  background-color: #008cba;
+  color: #ffffff;
+}
+
+#chat-container .message p {
+  margin: 0;
+  word-wrap: break-word;
+}
+
+/* Dark mode toggle */
+.dark-mode-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+
+.gap {
+  height: 20px;
+}
