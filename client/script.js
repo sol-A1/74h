@@ -5,23 +5,29 @@ const generateUniqueId = () => {
   return Math.random().toString(36).substr(2, 9)
 }
 
-const chatStripe = (isBot, text, id) => {
+const chatStripe = (isBot, text, id, isLoading = false) => {
   const stripeClass = isBot ? 'bot-stripe' : 'user-stripe'
   const name = isBot ? ' ' : ' '
   const uniqueId = id ? `id="${id}"` : ''
   const textClass = isBot ? 'bot-text' : 'user-text'
 
+  let messageText = text
+  if (isLoading && !text) {
+    messageText = 'Making a decision...'
+  }
+
   return `
     <div class="stripe ${stripeClass}">
       <div class="avatar">${name[0]}</div>
       <div class="text" ${uniqueId}>
-        <div class="${textClass}">${text}</div>
+        <div class="${textClass}">${messageText}</div>
         <div class="loader"></div>
       </div>
       <div class="gap"></div>
     </div>
   `
 }
+
 
 const typeText = (messageDiv, text) => {
   const charsPerInterval = 5;
@@ -68,22 +74,15 @@ const loader = (messageDiv) => {
 const handleSubmit = async (e) => {
   e.preventDefault()
 
-  const skillsInput = document.getElementById('skill');
-  const balanceInput = document.getElementById('quote-length');
-
-
-  const skills = skillsInput.value;
-  const balance = balanceInput.value;
+  const form = e.target;
+  const formData = new FormData(form);
+  const skills = formData.get('skills');
+  const balance = formData.get('balance');
 
   // user's chatstripe
-  chatContainer.innerHTML += chatStripe(false, `Generating a calculated decision...`)
-
-  // to clear the input fields
-  form.reset()
-
-  // Set the input values back to the fields
-  skillsInput.value = skills;
-  balanceInput.value = balance;
+  const userStripe = chatStripe(false, `${skills}`);
+  const loadingStripe = chatStripe(false, "Making a calculated decision...");
+  chatContainer.innerHTML += userStripe.replace(skills, loadingStripe);
 
   // bot's chatstripe
   const uniqueId = generateUniqueId()
@@ -119,6 +118,8 @@ const handleSubmit = async (e) => {
     alert('Something went wrong')
   }
 }
+
+
 
 
 form.addEventListener('submit', handleSubmit);
