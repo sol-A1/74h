@@ -15,26 +15,41 @@ body {
   background-color: #222;
   border-radius: 5px;
   margin: 13px auto;
-  max-width: 98%;
+  max-width: 100%;
   padding: 20px;
   text-align: center;
 }
 
-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #333;
-  color: white;
-  padding: 10px;
-  border-radius: 10px;
-  justify-content: center;
+input:focus, textarea:focus {
+  outline: none;
+  box-shadow: none;
 }
+
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 10px;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 97%;
+    border: 2px solid green; /* add a green border */
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3); /* add a box-shadow */
+  }
+
 
 h1 {
   display: flex;
   flex-direction: row;
+  margin-bottom: 20px;
   color: #fff;
   font-family: 'Russo One', sans-serif;
   font-size: 30px;
@@ -42,21 +57,40 @@ h1 {
   align-items: center;
 }
 
+
+
 p {
-  margin-top: 30px;
+  margin-top: 60px;
   color: #fff;
   font-size: 16px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   font-weight: normal;
   font-family: 'Russo One', sans-serif;
 }
 
 .question {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   text-align: left;
   color: white;
   font-family: 'Open Sans', sans-serif;
   
+}
+
+
+.placeholder {
+  color: #444;
+  font-size: 16px;
+  font-weight: normal;
+  font-family: 'Russo One', sans-serif;
+}
+
+.or {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: normal;
+  font-family: 'Russo One', sans-serif;
 }
 
 label {
@@ -85,7 +119,8 @@ button {
   color: #fff;
   cursor: pointer;
   font-size: 16px;
-  margin-top: 10px;
+  margin-top: 25px;
+  margin-bottom: 15px;
   padding: 10px 25px;
   transition: background-color 0.15s ease-in-out;
   font-size: 0.8em;
@@ -141,6 +176,7 @@ button:hover {
 footer {
   display: flex;
   margin-top: 10px;
+  margin-bottom: -15px;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -148,8 +184,11 @@ footer {
   color: white;
   padding: 10px;
   border-radius: 10px;
-  text-align: center; /* Add this line to center the text */
+  text-align: center;
+  border: 2px solid green; /* add a green border */
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3); /* add a box-shadow */
 }
+
 
 .warning {
   flex-grow: 1;
@@ -160,4 +199,3 @@ footer {
   font-weight: normal;
   font-family: 'Russo One', sans-serif;
 }
-
