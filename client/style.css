@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 * {
   box-sizing: border-box;
@@ -54,6 +55,8 @@ p {
   margin-bottom: 20px;
   text-align: left;
   color: white;
+  font-family: 'Open Sans', sans-serif;
+  
 }
 
 label {
@@ -102,37 +105,37 @@ button:hover {
   text-align: left;
   overflow-y: scroll;
   height: 500px;
+  color: white;
+  font-family: 'Open sans', sans-serif;
+
 }
 
 #chat-container ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  color: white;
 }
 
 #chat-container li {
   display: flex;
   margin-bottom: 10px;
+  color: white;
 }
 
 #chat-container .bot {
   justify-content: flex-start;
+  color: white;
 }
 
 #chat-container .user {
   justify-content: flex-end;
+  color: white;
 }
 
 #chat-container .message {
-  background-color: #555;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  font-size: 16px;
-  padding: 10px;
-  max-width
-  : 80%;
-margin-bottom: 10px;
-color: white;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
 }
 
 footer {
