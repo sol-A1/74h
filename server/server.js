@@ -34,7 +34,7 @@ prompt: `As an expert consultant, please advise me on the best choice between ${
 1. Decision: A paragraph detailing the decision.
 2. Explanation: Bullet pointed explanatory list of reasons why the decision is the best choice, and why the other option is not. Bullet points only. //do not add step 3.
 `,
-      temperature: 0.4,
+      temperature: 0.1,
       max_tokens: 3700,
       top_p: 1,
       frequency_penalty: 0,
