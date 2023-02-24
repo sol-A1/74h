@@ -15,34 +15,41 @@ body {
   background-color: #222;
   border-radius: 5px;
   margin: 13px auto;
-  max-width: 98%;
+  max-width: 100%;
   padding: 20px;
   text-align: center;
 }
 
-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  background-color: #333;
-  color: white;
-  padding: 5px;
-  margin-top: 15px;
-  border-radius: 10px;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 91%;
-  border: 2px solid green; /* add a green border */
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3); /* add a box-shadow */
+input:focus, textarea:focus {
+  outline: none;
+  box-shadow: none;
 }
+
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 5px;
+    margin-top: 15px;
+    border-radius: 10px;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 92%;
+    border: 2px solid green; /* add a green border */
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3); /* add a box-shadow */
+  }
+
 
 h1 {
   display: flex;
   flex-direction: row;
+  margin-bottom: 20px;
   color: #fff;
   font-family: 'Russo One', sans-serif;
   font-size: 30px;
@@ -50,21 +57,40 @@ h1 {
   align-items: center;
 }
 
+
+
 p {
   margin-top: 60px;
   color: #fff;
   font-size: 16px;
-  margin-bottom: 35px;
+  margin-bottom: 40px;
   font-weight: normal;
   font-family: 'Russo One', sans-serif;
 }
 
 .question {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   text-align: left;
   color: white;
   font-family: 'Open Sans', sans-serif;
   
+}
+
+
+.placeholder {
+  color: #444;
+  font-size: 16px;
+  font-weight: normal;
+  font-family: 'Russo One', sans-serif;
+}
+
+.or {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: normal;
+  font-family: 'Russo One', sans-serif;
 }
 
 label {
@@ -93,15 +119,16 @@ button {
   color: #fff;
   cursor: pointer;
   font-size: 16px;
-  margin-top: 10px;
-  margin-bottom: 8px;
+  margin-top: 15px;
+  margin-bottom: 4px;
   padding: 10px 25px;
-  transition: background-color 0.15s ease-in-out;
+  transition: background-color 0.09s ease-in-out;
   font-size: 0.8em;
+  font-family: 'Montserrat', sans-serif;
 }
 
 button:hover {
-  background-color: #0ea30082;
+  background-color: #1090d5aa;
 }
 
 #chat-container {
@@ -163,12 +190,13 @@ footer {
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3); /* add a box-shadow */
 }
 
+
 .warning {
   flex-grow: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 12px;
-  font-weight: bold;
-  font-family: 'Monsteratt', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-family: 'Russo One', sans-serif;
 }
